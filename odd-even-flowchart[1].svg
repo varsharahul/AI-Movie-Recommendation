@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1040" viewBox="0 0 760 1040" role="img" aria-labelledby="title desc">
+<title id="title">Odd or Even Flowchart</title>
+<desc id="desc">Start, input a number, check whether the number modulo 2 equals zero. If yes, display Even. If no, display Odd. Then end.</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#222"/>
+  </marker>
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; font-size: 19px; fill: #222; text-anchor: middle; dominant-baseline: middle; }
+    .flow { fill: none; stroke: #222; stroke-width: 3; marker-end: url(#arrow); }
+    .shape { stroke-width: 3; }
+    .branch { font-size: 17px; font-weight: bold; }
+  </style>
+</defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<!-- Start -->
+<rect x="255" y="35" width="250" height="68" rx="34" fill="#fff" stroke="#9caf63" class="shape"/>
+<text x="380" y="69">Start</text>
+<path class="flow" d="M380 103 V150"/>
+<!-- Input -->
+<path d="M290 150 H470 L510 210 H250 Z" fill="#fff" stroke="#548eb5" class="shape"/>
+<text x="380" y="180">Input a number (N)</text>
+<path class="flow" d="M380 210 V275"/>
+<!-- Decision -->
+<path d="M380 275 L535 375 L380 475 L225 375 Z" fill="#fff" stroke="#bd796c" class="shape"/>
+<text x="380" y="360">Is N % 2 == 0?</text>
+<text x="380" y="390" font-size="16"> (remainder is zero)</text>
+<!-- Yes branch to even -->
+<path class="flow" d="M380 475 V545"/>
+<text class="branch" x="414" y="510">Yes</text>
+<rect x="265" y="545" width="230" height="65" fill="#fff" stroke="#8975a8" class="shape"/>
+<text x="380" y="578">Display "Even"</text>
+<!-- No branch to odd -->
+<path class="flow" d="M535 375 H635 V675 H495"/>
+<text class="branch" x="574" y="350">No</text>
+<rect x="265" y="645" width="230" height="65" fill="#fff" stroke="#8975a8" class="shape"/>
+<text x="380" y="678">Display "Odd"</text>
+<!-- Merge output paths -->
+<path class="flow" d="M380 610 V755 H510 V800"/>
+<path class="flow" d="M380 710 V755 H510"/>
+<!-- End -->
+<rect x="385" y="800" width="250" height="68" rx="34" fill="#fff" stroke="#9caf63" class="shape"/>
+<text x="510" y="834">End</text>
+</svg>
